@@ -1,0 +1,82 @@
+% ============================================================
+% Preamble - Professional CV/Resume Settings
+% Based on TLCresume template from Overleaf
+% ============================================================
+
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+% ============================================================
+% FONTS
+% ============================================================
+\usepackage[T1]{fontenc}
+\usepackage[default,semibold]{sourcesanspro}
+\usepackage[10pt]{moresize}
+\usepackage{anyfontsize}
+
+% ============================================================
+% PAGE LAYOUT
+% ============================================================
+\usepackage[margin=.5in, top=.5in, bottom=1in]{geometry}
+\raggedright
+\raggedbottom
+
+% ============================================================
+% COLORS
+% ============================================================
+\usepackage{xcolor}
+\definecolor{highlight}{RGB}{61, 90, 128}
+
+% ============================================================
+% HYPERLINKS
+% ============================================================
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=highlight,
+    pdfauthor={Nguyen Phuc Bao Lam},
+    pdftitle={Resume - Nguyen Phuc Bao Lam}
+}
+
+% ============================================================
+% LISTS
+% ============================================================
+\usepackage[inline]{enumitem}
+\setlength{\tabcolsep}{0in}
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+% Tight itemize environment
+\newenvironment{zitemize}{
+\begin{itemize} \itemsep 0pt \parskip 0pt \parsep 1pt}
+{\end{itemize}\vspace{-.5em}}
+
+% ============================================================
+% SECTION FORMATTING
+% ============================================================
+\usepackage[nostruts]{titlesec}
+\titlespacing*{\section}{0em}{0.5em}{0em}
+\titleformat{\section}{\color{highlight} \scshape \raggedright \large}{}{0em}{}[\vspace{-0.75em}\hrulefill]
+
+% Subsection formatting
+\titlespacing*{\subsection}{0em}{0em}{0em}
+\titleformat{\subsection}{\bfseries}{}{0em}{}[]
+
+% ============================================================
+% CUSTOM COMMANDS
+% ============================================================
+
+% Bold skills command
+\newcommand{\skills}[1]{{\bfseries #1}}
+
+% Italic subtext
+\newcommand{\subtext}[1]{\textit{#1}\par\vspace{-.75em}}
+
+% ============================================================
+% NO PAGE NUMBERS
+% ============================================================
+\pagenumbering{gobble}
+
+% ============================================================
+% HEADER SETUP
+% ============================================================
+\usepackage{fancyhdr}

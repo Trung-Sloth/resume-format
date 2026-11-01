@@ -1,0 +1,218 @@
+% ============================================================
+% CV/Resume - Nguyen Phuc Bao Lam (Mike)
+% Based on TLCresume template
+% ============================================================
+
+\input{preamble}
+
+% ============================================================
+% CONTACT INFORMATION
+% ============================================================
+\def\name{Lam Nguyen (Mike)}
+\def\phone{0909219251}
+\def\city{Ho Chi Minh}
+\def\email{baolam.work@gmail.com}
+\def\LinkedIn{bowber}
+\def\github{bowber}
+
+% ============================================================
+% HEADER SETUP
+% ============================================================
+\fancypagestyle{fancy}{%
+\fancyhf{}
+\lhead{
+    \href{mailto:\email}{\email} \\
+    \phone \\
+    \city
+}
+\chead{%
+    \centering {\Huge \skills \name \vspace{.25em}}
+}
+\rhead{
+    \href{https://github.com/\github}{github.com/\github} \\
+    \href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn}
+}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{highlight}\leaders\hrule height \headrulewidth\hfill}}
+}
+\pagestyle{fancy}
+\setlength{\headheight}{90pt}
+\setlength{\headsep}{5pt}
+
+\begin{document}
+
+% ============================================================
+% OBJECTIVE / SUMMARY
+% ============================================================
+Full-stack and DevOps engineer with commercial team experience and a background in independent system building since 2019.
+Focused on performance-aware backend and full-stack development, with hands-on experience in Rust, Node.js, React/SolidJS, and Kubernetes, AWS and Terraform.
+Comfortable designing, deploying, and operating production systems under real-world constraints.
+Professional English proficiency (TOEIC 930).
+
+% ============================================================
+% EXPERIENCE
+% ============================================================
+\section{Experience}
+
+\subsection{{Full Stack \& DevOps Engineer\hfill March 2026 -- October 2026}}
+\subtext{East Agile (Onsite)\hfill}
+\begin{zitemize}
+\item Delivered DevOps (on-prem and AWS) and full-stack work across an AI platform and a desktop analytics product.
+\item Maintained and optimized Kubernetes clusters across both on-prem and AWS infrastructure.
+\item Invented an AI-agent workflow that automated delivery end to end, trading high token cost for speed.
+\item Then designed a next-generation approach that cut daily AI spend by 85\%.
+\item Now merges PRs nearly 6x faster (19 h to 3 h median) at over 3x the volume, with better code quality.
+\end{zitemize}
+
+\subsection{{Fullstack Engineer\hfill September 2025 -- November 2025}}
+\subtext{Lotics (Hybrid)\hfill}
+\begin{zitemize}
+\item Implemented real-time collaborative updates and expanded data schema capabilities (linked tables and multi-field types) to support enterprise client migration from spreadsheet-based workflows.
+\item Optimized AI task execution by switching LLM providers, reducing response latency from minutes to sub-minute processing and significantly improving user experience.
+\item Integrated AI tracing and evaluation tooling to monitor model usage and cost performance during early-stage deployment.
+\item Delivered rapid production fixes and iterative improvements based on direct client feedback.
+\end{zitemize}
+
+\subsection{{Web Developer\hfill March 2023 -- February 2025}}
+\subtext{Topebox (Onsite)\hfill}
+\begin{zitemize}
+\item Optimized a near real-time multi-region game (about 2,000 CCU) by fixing Firestore bottlenecks with Redis buffering, cutting infrastructure cost.
+\item Contributed to a 3D blockchain web game: frontend architecture, smart contract integration and CI/CD on GCP.
+\item Improved web game rendering performance by replacing heavy React wrappers with SolidJS and Three.js.
+\item Built an internal game CMS with role-based access for multiple departments, deployed through automated staging and production pipelines.
+\end{zitemize}
+
+\subsection{{Independent Developer (Freelance)\hfill November 2019 -- July 2022}}
+\subtext{Remote\hfill}
+\begin{zitemize}
+\item Built and operated a content platform serving 100k+ monthly page views with zero infrastructure spend beyond a \$10 domain.
+\item Designed a multi-provider architecture (Heroku, MongoDB Atlas, Azure, Redis) with hot/cold storage separation and client-side load balancing.
+\item Delivered 100+ small-scale Unity mini games within fast production cycles.
+\item Developed an automated P2P trading assistant (React + Node.js) for dynamic pricing and positioning workflows.
+\end{zitemize}
+
+% ============================================================
+% TECHNICAL EXPERTISE
+% ============================================================
+\section{Technical Expertise}
+
+\subsection{{Frontend Engineering}}
+\begin{zitemize}
+\item React, Next.js, SolidJS, Three.js, WebGL; high-performance UI and web game interfaces.
+\end{zitemize}
+
+\subsection{{Backend \& Systems}}
+\begin{zitemize}
+\item Rust (Axum), Python (Django, Flask), Node.js; REST APIs and near real-time backends.
+\item PostgreSQL, Redis, RabbitMQ, RocksDB.
+\end{zitemize}
+
+\subsection{{Infrastructure \& DevOps}}
+\begin{zitemize}
+\item AWS, Terraform, Docker, Kubernetes (EKS, k0s, on-prem), Helm, Linux.
+\item CI/CD with Jenkins, CircleCI, GitHub Actions and GitLab CI; Nginx, HAProxy, Grafana.
+\end{zitemize}
+
+\subsection{{Additional Technologies}}
+\begin{zitemize}
+\item Tauri, Astro, SQLite, MongoDB, Blockchain (ETH Layer 2, TON).
+\end{zitemize}
+
+% ============================================================
+% PROJECTS
+% ============================================================
+\section{Projects}
+
+\subsection{{YBL.AI \hfill March 2026 -- July 2026}}
+\subtext{\href{https://faybl.com}{faybl.com}\hfill}
+\begin{zitemize}
+\item Maintained and upgraded production and staging Kubernetes clusters on AWS (EKS).
+\item Cut slow AI session start-ups by 87\%.
+\item Eliminated recurring AI agent crashes by cutting peak memory 5x.
+\item Uncovered about 9x over-provisioned cloud capacity, opening a path to major cost savings.
+\item Managed infrastructure as code with Terraform.
+\item Ran CI/CD on self-hosted CircleCI runners and kept builds and deployments flowing.
+\item Built a queue-based autoscaling platform (RabbitMQ, KEDA) for automated AI testing.
+\item Handled monitoring and incident response for a production AI service.
+\end{zitemize}
+
+\subsection{{SkyDeck.ai \hfill August 2026 -- September 2026}}
+\subtext{\href{https://skydeck.ai}{skydeck.ai}\hfill}
+\begin{zitemize}
+\item Built an agent chat that lets teams run Claude Code in persistent cloud Agent Pods.
+\item Let organizations build custom Pods at their own CPU, memory and disk size.
+\item Built end-to-end tests that launch real Pods on a live Kubernetes cluster, with no mocks.
+\end{zitemize}
+
+\subsection{{Jenner Language \hfill September 2026 -- October 2026}}
+\subtext{\href{https://jenneranalytics.com}{jenneranalytics.com}\hfill}
+\begin{zitemize}
+\item Extended coverage to 200+ statistical procedures, powering the Jenner Studio desktop app.
+\item Led a team of 3 on Jenner Studio, a sub-project delivering the engine as a desktop app for Windows, macOS and Linux.
+\item Removed 80\% of release delays by optimizing CI pipelines.
+\item Helped migrate CI from CircleCI to Jenkins.
+\end{zitemize}
+
+\subsection{{OneBuck.dev \hfill September 2026 -- October 2026}}
+\subtext{\href{https://onebuck.dev}{onebuck.dev}\hfill}
+\begin{zitemize}
+\item Built a \$1-per-unit developer services platform in Go and PostgreSQL.
+\item Launched 7 services: uptime monitoring, database backups, managed Kubernetes, feedback widget, feature flags, webhook buffer and rank tracking.
+\end{zitemize}
+
+\subsection{{Lotics.ai \hfill September 2025 -- November 2025}}
+\subtext{\href{https://lotics.ai}{lotics.ai} (Node.js, Hono, React)\hfill}
+\begin{zitemize}
+\item Built the real-time layer, richer data types and spreadsheet-migration imports for an AI workflow automation platform.
+\end{zitemize}
+
+\subsection{{Telegram Mini App Game (NDA) \hfill 2024 -- 2025}}
+\subtext{SolidJS, Three.js, Firestore, GCP Cloud Run\hfill}
+\begin{zitemize}
+\item Built a blockchain-based mini app game end to end (app, bot, landing page), reaching 700k users and 2,000 concurrent users.
+\end{zitemize}
+
+\subsection{{axum-db-benchmark \hfill June 2025 -- July 2025}}
+\subtext{\href{https://github.com/bowber/axum-db-benchmark/tree/sqlite}{github.com/bowber/axum-db-benchmark/tree/sqlite}\hfill}
+\begin{zitemize}
+\item Designed comparative database benchmarks using Rust (Axum) and wrk under concurrent load.
+\item Evaluated performance characteristics across multiple databases to inform backend architecture decisions.
+\end{zitemize}
+
+% ============================================================
+% ACHIEVEMENTS
+% ============================================================
+\section{Achievements}
+
+\subsection{{Dockerfile Contest \hfill November 2025}}
+\begin{zitemize}
+\item Lightest Docker Image Award
+\end{zitemize}
+
+\subsection{{April 30 Olympiad for Informatics \hfill April 2019}}
+\begin{zitemize}
+\item Silver Medal
+\end{zitemize}
+
+% ============================================================
+% EDUCATION
+% ============================================================
+\section{Education}
+
+\subsection{{Bachelor of Chemical Engineering, Ho Chi Minh City University of Technology \hfill 2021 -- Present}}
+\begin{zitemize}
+\item Extended the study timeline and graduation date by prioritizing full-time work over coursework.
+\end{zitemize}
+
+% ============================================================
+% LANGUAGES
+% ============================================================
+\section{Languages}
+
+\begin{tabular}{p{11em} p{1em} p{43em}}
+\skills{English} & & TOEIC 930.\\
+\skills{Vietnamese} & & Native.\\
+\end{tabular}
+
+\end{document}

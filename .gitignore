@@ -1,0 +1,26 @@
+# Output files
+output/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary files
+tmp/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Beamer/Slides auxiliary files
+*.nav
+*.snm
+*.vrb
+
+# Generated PDFs (keep source, not output)
+slides/*.pdf
